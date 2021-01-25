@@ -1,0 +1,5 @@
+<!--pages/music/music.wxml-->
+<text>正在火速开发中。。。。。。</text>
+<view class="progress-box">
+  <progress percent="80" color="#474747" active stroke-width="3" />
+</view>
