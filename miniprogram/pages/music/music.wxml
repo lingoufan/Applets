@@ -1,5 +1,14 @@
 <!--pages/music/music.wxml-->
-<text>正在火速开发中。。。。。。</text>
-<view class="progress-box">
-  <progress percent="80" color="#474747" active stroke-width="3" />
-</view>
+<swiper indicator-dots="true" indicator-active-color="#d43c43" autoplay="true" 
+interval="3000" duration="1700" class="swiper">
+  <swiper-item wx:for="{{imgUrls}}" wx:key="id">
+  <image src="{{item.url}}" class="image" mode=" scaleToFill"></image>
+  </swiper-item>
+</swiper>
+
+<text class="title">场景歌单</text>
+<view class="playlist-container">
+  <block wx:for="{{playlist}}" wx:key="id">
+    <x-playlist playlist="{{item}}"></x-playlist>
+  </block>
+</view>0
