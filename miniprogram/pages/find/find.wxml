@@ -1,7 +1,8 @@
 <!--pages/find/find.wxml-->
 <text>该功能还在开发中，敬请期待。。。</text>
 <view>
-  <block wx:for="{{cards}}">
+  <block wx:for="{{cards}}" wx:key="cards">
     <my-card></my-card>
   </block>
 </view>
+<search-bar></search-bar>

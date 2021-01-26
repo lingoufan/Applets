@@ -11,4 +11,4 @@ interval="3000" duration="1700" class="swiper">
   <block wx:for="{{playlist}}" wx:key="id">
     <x-playlist playlist="{{item}}"></x-playlist>
   </block>
-</view>0
+</view>
