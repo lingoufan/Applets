@@ -2,7 +2,8 @@
   "pages": [
     "pages/music/music",
     "pages/find/find",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/test/test"
   ],
   "requiredBackgroundModes": [
     "audie"
@@ -17,7 +18,7 @@
   "tabBar": {
     "color": "#474747",
     "selectedColor": "#d43c43",
-    "list":[
+    "list": [
       {
         "pagePath": "pages/music/music",
         "text": "音乐",
@@ -35,8 +36,8 @@
         "text": "我的",
         "iconPath": "images/tab/profile.png",
         "selectedIconPath": "images/tab/profile-actived.png"
-      } 
-    ] 
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

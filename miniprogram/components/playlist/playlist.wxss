@@ -14,8 +14,8 @@
 
 .playlist-playcount{
   font-size: 24rpx;
-  color:#fff;
-  text-shadow:1px 0 0 rgba(0,0, 0, 0.15) ;
+  color:rgb(33, 48, 75);
+  text-shadow:1px 0 0 rgba(139, 80, 80, 0.15) ;
   position: absolute;
   right: 10rpx;
   top:4rpx;

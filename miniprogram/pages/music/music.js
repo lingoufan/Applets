@@ -1,4 +1,5 @@
 // pages/music/music.js
+
 Page({
 
   /**
@@ -31,44 +32,7 @@ Page({
         url:'http://p1.music.126.net/zUv2mRobckK7Tdn2bp9iSA==/109951165664840470.jpg?imageView&quality=89'
        }
     ],
-    playlist:[
-      {
-        "id":"1001",
-        "playCount":"1562万",
-        "name":"[Future Bass] 坠入激流 等待电音洗礼",
-        "picUrl":"http://p4.music.126.net/8RLO4KlE7wnAxbAortkbVw==/109951165543542256.jpg?param=140y140"
-      },
-      {
-        "id":"1002",
-        "playCount":"45.5万",
-        "name":"精选｜Cover翻唱百听不腻",
-        "picUrl":"http://p3.music.126.net/wkb9QH7yBjRMB-DIKadArA==/109951164301459166.jpg?param=140y140"
-      },
-      {
-        "id":"1003",
-        "playCount":"3345",
-        "name":"[欧美私人订制] 最懂你的欧美推荐 每日更新35首",
-        "picUrl":"http://p4.music.126.net/qZOhqXNepqsR8jcjfyTIiA==/109951165545384753.jpg?param=140y140"
-      },
-      {
-        "id":"1004",
-        "playCount":"45.2万",
-        "name":"[聚精会神] 学习工作必备的背景音乐",
-        "picUrl":"http://p3.music.126.net/G-jS2dE3XbqvWFaSk-qU3Q==/109951165545348909.jpg?param=140y140"
-      },
-      {
-        "id":"1005",
-        "playCount":"5545万",
-        "name":"[一周欧美上新] 碧梨携手ROSALÍA献唱《亢奋》原声",
-        "picUrl":"http://p3.music.126.net/iLEV3KhqQPEyATZzkdxMyg==/109951165649686740.jpg?param=140y140"
-      },
-      {
-        "id":"1006",
-        "playCount":"2210",
-        "name":"纯音林涧丨自然 · 音乐",
-        "picUrl":"http://p4.music.126.net/mc7kb-lQGTMSy5zahJrMOQ==/109951165313898113.jpg?param=140y140"
-      }
-    ]
+    playlist:[]
 
   },
 
@@ -77,7 +41,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this._getPlaylist()
   },
 
   /**
@@ -125,7 +89,20 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function () {},
 
-  }
+  _getPlaylist(){
+    wx:wx.showLoading({
+      title: '加载中', 
+    })
+    wx.cloud.callFunction({
+      name: 'playlist'
+    }).then((res) => {
+      console.log (res)
+      this.setData({
+        playlist: res.result
+      })
+      wx.hideLoading()
+    })
+  },
 })
