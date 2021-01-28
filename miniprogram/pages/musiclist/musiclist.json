@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "bgyx-musiclist":"/components/musiclist/musiclist"
+  },
+  "navigationBarTitleText":"歌曲"
+  
+}
