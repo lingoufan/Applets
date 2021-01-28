@@ -29,7 +29,7 @@
   font-size: 24rpx;
   color: #888;
 }
-
+/*高亮模式*/
 .playing view,.playing text{
   color: red;
 
