@@ -80,6 +80,19 @@
 .ting{
   animation-play-state: paused;
 }
+
+.content-play-progress{  
+  display: flex;  
+  align-items: center;  
+  margin-top: 900rpx;
+  font-size: 9pt;  
+  text-align: center;
+  bottom:10% ;
+}
+.content-play-progress>view{  
+  flex: 1;
+}
+
 .control{
   position: absolute;
   bottom: 8%;
@@ -101,4 +114,11 @@
 .icon-3bofang3x, .icon-pause{
   font-size:120rpx;
   margin:0 50rpx;
+}
+.progress-bar{
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom:24%;
 }

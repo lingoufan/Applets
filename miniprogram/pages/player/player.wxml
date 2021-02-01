@@ -7,11 +7,14 @@
    <view class="player-disc {{isPlaying?'playing':''}}">
       <image class="player-img zhuan {{isPlaying?'':'ting'}}" src="{{picUrl}}"></image>
    </view>
-
-   <view class="=control">
+</view>
+<!-- 进度条 -->
+<view class="progress-bar">
+  <bgyx-progress-bar bind:musicEnd="onNext"/>
+</view>
+ <view class="=control">
    <text class="iconfont icon-houtui" bind:tap="onPrev"></text>
    <text class="iconfont {{isPlaying? 'icon-pause':'icon-3bofang3x'}} " bind:tap="togglePlaying"></text>
    <text class="iconfont icon-qianjin" bind:tap="onNext"></text>
+ </view>
 
-   </view>
-</view>
