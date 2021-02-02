@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "bgyx-progress-bar":"/components/progress-bar/progress-bar"
+    "bgyx-progress-bar":"/components/progress-bar/progress-bar",
+    "bgyx-lyric":"/components/lyric/lyric"
   }
 }

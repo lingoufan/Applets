@@ -2,6 +2,7 @@ let musiclist = []
 //正在播放的歌曲 index
 let playingIndex = 0
  const backgroundAudioManager =wx.getBackgroundAudioManager()
+ const innerAudioContext = wx.createInnerAudioContext()
 Page({
 
   /**
@@ -9,7 +10,11 @@ Page({
    */
   data: {
     picUrl: '',
-    isPlaying:false
+    isPlaying:false,
+    name:'',
+    singer:'',
+    isLyricShow: false,
+    lyric :'',
   },
 
   /**
@@ -60,6 +65,25 @@ Page({
       this.setData({
         isPlaying:true
       })
+      wx.hideLoading()
+      //请求歌词
+      wx.cloud.callFunction({
+        name:'music',
+        data:{
+          musicId,
+          $url:'lyric',
+        }
+      }).then((res) =>{
+        console.log(res)
+        let lyric = '暂无歌词'
+        const lrc = res.result.lrc
+        if(lrc) {
+          lyric = lrc.lyric
+        }
+        this.setData({
+          lyric
+        })
+      })
     })
   },
   togglePlaying(){
@@ -70,6 +94,11 @@ Page({
     }
     this.setData({
       isPlaying: !this.data.isPlaying
+    })
+  },
+  onLyricShow(){
+    this.setData({
+      isLyricShow: !this.data.isLyricShow
     })
   },
   onPrev(){
