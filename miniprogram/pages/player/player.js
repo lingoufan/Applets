@@ -115,5 +115,14 @@ Page({
       playingIndex = 0
     }  
     this._loadMusicDetail(musiclist[playingIndex].id)
+  },
+  onBack(){
+    var pages = getCurrentPages();
+    var beforePage = pages[pages.length - 2];
+    beforePage.loadData();
+    wx.navigateBack({
+      delta: 1,
+    })
   }
+
 })

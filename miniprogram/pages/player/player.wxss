@@ -122,3 +122,9 @@
   transform: translateX(-50%);
   bottom:24%;
 }
+.icon-fanhui{
+  margin-left: 20rpx;
+  margin-top: 90rpx;
+  color: #ffffff;
+  font-size: 50rpx;
+}

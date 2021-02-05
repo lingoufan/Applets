@@ -1,2 +1,62 @@
-<!--pages/profile/profile.wxml-->
-<text>冲！！！</text>
+<view class="container">
+  <view class="car">
+    <view class='avatar'>
+      <open-data type='userAvatarUrl'></open-data>
+    </view>
+    <view class="text">
+      <text class="name">匿名</text>
+      <text class="_cut">    |    </text>
+      <text class="iconfont icon-nan"></text>
+      <text class="iconfont icon-bianji">编辑</text>
+      <view class="intr">什么也没留下哦~</view>
+    </view>
+    <view class="operation">
+      <view>
+        <view>0</view>
+        <text>我关注的问题</text>
+      </view>
+      <text class="cut">|</text>
+      <view>
+        <view>0</view>
+        <text>我关注的人</text>
+      </view>
+      <text class="cut">|</text>
+      <view>
+        <view>0</view>
+        <text>关注我的人</text>
+      </view>
+    </view>
+
+  </view>
+  <view class="a-control">
+    <view>
+      <text>我的消息</text>
+      <text class="l">></text>
+    </view>
+  </view>
+  <view class="b-control">
+    <view>
+      <text>我的提问</text>
+      <text class="l">></text>
+    </view>
+  </view>
+  <view class="c-control">
+    <view>
+      <text>我的回答</text>
+      <text class="l">></text>
+    </view>
+  </view>
+
+  <view class="pf-control">
+    <view>
+      <text>绑定手机号码</text>
+      <text class="i">请绑定></text>
+    </view>
+  </view>
+  <view class="pfa-control">
+    <view>
+      <text>实名认证</text>
+      <text class="l">></text>
+    </view>
+  </view>
+</view>

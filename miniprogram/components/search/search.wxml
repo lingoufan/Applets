@@ -1,14 +1,4 @@
-<!--components/search/search.wxml-->
-<view>
-     <view>
-        <view class="search-bar">
-            <!-- 搜索框 -->
-                <view class="search-bar__box">
-                    <icon class="icon-search" type="search" size="14"></icon>
-                    <input type="text" class="search-bar__input" placeholder="请输入搜索内容"/>
-                </view>
-            <!--搜索按钮 -->
-            <view class="search-bar__search-btn" >搜索</view>
-        </view>
-    </view>
+<view class="container">
+    <input class="input" placeholder="{{placeholder}}" value='{{inputValue}}' bindinput="onInput" bindfocus="onFocus"></input>
+    <button class="search-btn" bind:tap="onSearch">搜索</button>
 </view>

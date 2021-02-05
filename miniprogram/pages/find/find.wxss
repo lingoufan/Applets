@@ -1,1 +1,25 @@
-/* pages/find/find.wxss */
+/* miniprogram/pages/1/1.wxss */
+/**index.wxss**/
+.header{
+  position: absolute;
+  height:100rpx;
+  width: 100%;
+  background-color:	#7B68EE;
+}
+.left{
+  display: flex;
+  width: 40rpx;
+  height: 65rpx;
+}
+.icon-bianji{
+  position: absolute;
+  top: 15rpx;
+  left: 30rpx;
+  font-size: 60rpx;
+}
+.right{
+  position: absolute;
+  margin-left: 100rpx;
+  margin-right:20rpx;
+  top: 15rpx;
+}

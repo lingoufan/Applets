@@ -1,8 +1,9 @@
-<!--pages/find/find.wxml-->
-<text>该功能还在开发中，敬请期待。。。</text>
-<view>
-  <block wx:for="{{cards}}" wx:key="cards">
-    <my-card></my-card>
-  </block>
+<navigation  showIcon='{{false}}' title= "发现"></navigation>
+<view class="header">
+  <view class="left" bindtap="onPublish">
+    <i class="iconfont icon-bianji"></i>
+  </view>
+  <view class="right">
+    <bgyx-search bind:search="onSearch"/>
+  </view>
 </view>
-<search-bar></search-bar>

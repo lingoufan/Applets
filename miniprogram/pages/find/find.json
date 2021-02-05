@@ -1,8 +1,8 @@
 {
   "usingComponents": {
-    "my-card":"/components/card/card",
-    "search-bar":"/components/search/search"
+    "bgyx-search":"/components/search/search"
   },
 
-  "navigationBarTitleText":"发现" 
+  "navigationBarTitleText":"发现"  ,
+  "navigationStyle": "default"
 }
