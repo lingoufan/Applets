@@ -7,3 +7,8 @@
     <bgyx-search bind:search="onSearch"/>
   </view>
 </view>
+<scroll-view class="container" scroll-y>
+    <!-- 弹出层 -->
+    <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+    </x-login>
+</scroll-view>

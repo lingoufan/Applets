@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "bgyx-search":"/components/search/search"
+    "bgyx-search":"/components/search/search",
+    "x-login": "/components/login/login"
   },
 
   "navigationBarTitleText":"发现"  ,

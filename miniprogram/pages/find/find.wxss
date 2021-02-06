@@ -1,5 +1,4 @@
-/* miniprogram/pages/1/1.wxss */
-/**index.wxss**/
+
 .header{
   position: absolute;
   height:100rpx;
@@ -23,3 +22,4 @@
   margin-right:20rpx;
   top: 15rpx;
 }
+
