@@ -26,6 +26,11 @@ page {
   flex-direction: column;
   justify-content: flex-start;
 }
+pages {
+  position: relative;
+  z-index: 9999998;
+  background: #fff;
+}
 
 .userinfo, .uploader, .tunnel {
   margin-top: 40rpx;
